@@ -1,0 +1,5 @@
+# Created at 2024-09-13T10:57:21.094
+Boot Manifest-JAR contains absolute paths in classpath 'D:\mine\LAZA_Backend\target\test-classes'
+Hint: <argLine>-Djdk.net.URLClassPath.disableClassPathURLCheck=true</argLine>
+'other' has different root
+

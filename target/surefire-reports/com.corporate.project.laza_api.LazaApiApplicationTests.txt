@@ -1,0 +1,4 @@
+-------------------------------------------------------------------------------
+Test set: com.corporate.project.laza_api.LazaApiApplicationTests
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.653 s -- in com.corporate.project.laza_api.LazaApiApplicationTests

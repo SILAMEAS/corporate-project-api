@@ -8,6 +8,7 @@ import com.corporate.project.laza_api.model.request.AuthPasswordChangeRequest;
 import com.corporate.project.laza_api.model.request.AuthRequest;
 import com.corporate.project.laza_api.model.response.AuthResponse;
 import com.corporate.project.laza_api.service.AppUserService;
+import jakarta.validation.Valid;
 import lombok.AllArgsConstructor;
 import org.apache.coyote.BadRequestException;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -16,7 +17,14 @@ import org.springframework.security.authentication.DisabledException;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PatchMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @AllArgsConstructor
@@ -46,7 +54,7 @@ public class AuthRestController {
     }
 
     @PostMapping("/login")
-    public ApiResponse<AuthResponse> authenticate(@RequestBody AuthRequest authRequest) throws Exception {
+    public ApiResponse<AuthResponse> authenticate(@Valid @RequestBody AuthRequest authRequest) throws Exception {
         authenticate(authRequest.getEmail(), authRequest.getPassword());
         final UserDetails userDetails = appUserService.loadUserByUsername(authRequest.getEmail());
         final String token = jwtService.generateToken(userDetails);
@@ -60,12 +68,12 @@ public class AuthRestController {
 
 
     @PostMapping("/register")
-    public ApiResponse<?> register(@RequestBody AppUserRequest appUserRequest) {
+    public ApiResponse<?> register(@Valid @RequestBody AppUserRequest appUserRequest) {
         return new ApiResponse<>("User Registered Successfully", appUserService.register(appUserRequest), 200);
     }
 
     @DeleteMapping("/remove/{userId}")
-    public ApiResponse<?> removeUser(@PathVariable Integer userId) {
+    public ApiResponse<?> removeUser( @PathVariable  Integer userId) {
         var deletedUser = appUserService.getUserById(userId);
         if (deletedUser == null) {
             return new ApiResponse<>("User Not Found", null, 404);
