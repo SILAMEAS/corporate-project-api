@@ -34,6 +34,14 @@ public class AppUser implements UserDetails {
     )
     private List<Role> roles;
 
+    // The user who owns the post
+    @OneToMany(mappedBy = "userOwner", cascade = CascadeType.ALL)
+    private List<Reaction> ownedReactions;
+
+    // The user who reacts to posts
+    @OneToMany(mappedBy = "userReact", cascade = CascadeType.ALL)
+    private List<Reaction> reactedReactions;
+
     // Other fields and methods required for UserDetails
 
     // Implement UserDetails methods

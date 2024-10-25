@@ -36,7 +36,7 @@ public class AppUserServiceImp implements AppUserService {
     }
 
     @Override
-    public AppUserResponse register(AppUserRequest appUserRequest) {
+    public AppUserResponse  register(AppUserRequest appUserRequest) {
         AppUser user = new AppUser();
         user.setFullName(appUserRequest.getFullName());
         user.setEmail(appUserRequest.getEmail());

@@ -1,0 +1,16 @@
+
+†	java:S1122"FDefine and throw a dedicated exception instead of using a generic one.(êÆÖËùÿÿÿÿJ$780ef1ce-59ec-45f2-a3e6-55b380a39a1c
+	java:S1124"FDefine and throw a dedicated exception instead of using a generic one.(ÈçïÕJ$27e6136a-1ea3-4c17-ac1b-fbe56969078f
+	java:S112'"FDefine and throw a dedicated exception instead of using a generic one.(Â††‘J$e978cfdc-d997-4551-857b-32fce4311156
+š
+java:S2293@"YReplace the type specification in this constructor call with the diamond operator ("<>").(Ñ†½·ùÿÿÿÿJ$26f9f586-ea23-477a-8ec8-d6ed199156f2
+x
+java:S4973]"<Strings and Boxed types should be compared using "equals()".(§ş¹ªJ$69fd5bb4-22af-4e97-bf92-1795f980e813
+b
+java:S1452G"&Remove usage of generic wildcard type.(ÖğÔJ$7adb6f1e-bc1c-4511-96e8-58dd28569e05
+g
+java:S1452L"&Remove usage of generic wildcard type.(›„ÃÙúÿÿÿÿJ$bd374253-1b0d-404f-b997-33775f855e2f
+g
+java:S1452V"&Remove usage of generic wildcard type.(ĞÁ›ØúÿÿÿÿJ$b12766ea-846d-4499-923e-758d61ead561
+b
+java:S1452\"&Remove usage of generic wildcard type.(êèø‰J$d19fb507-7715-4622-a4c8-b7294cb0632c

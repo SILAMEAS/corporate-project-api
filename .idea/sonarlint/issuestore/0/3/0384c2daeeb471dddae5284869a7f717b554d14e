@@ -1,0 +1,6 @@
+
+¡	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(¨ÀÉ¹üÿÿÿÿ8òþ‘“£2J$7dfb7291-b142-478c-9eda-f35dd5d1c677
+|
+java:S1128"ZRemove this unused import 'com.corporate.project.laza_api.controller.ReactRestController'.(¸È«Ìøÿÿÿÿ8…ëÔ”£2
+O
+java:S1128"-Remove this unused import 'java.util.Locale'.(åð×±ûÿÿÿÿ8…ëÔ”£2
